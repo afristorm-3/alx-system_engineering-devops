@@ -1,0 +1,15 @@
+total 148
+drwxrwxr-x 2 afristorm3 afristorm3 4096 Sep  5 15:36 .
+drwxrwxr-x 6 afristorm3 afristorm3 4096 Sep  5 09:24 ..
+-rwxrw-r-- 1 afristorm3 afristorm3   32 Sep  5 09:28 0-hello_world
+-rwxrw-r-- 1 afristorm3 afristorm3   28 Sep  5 14:15 1-confused_smiley
+-rwxrw-r-- 1 afristorm3 afristorm3   28 Sep  5 15:25 2-hellofile
+-rwxrw-r-- 1 afristorm3 afristorm3   39 Sep  5 15:27 3-twofiles
+-rwxrw-r-- 1 afristorm3 afristorm3   29 Sep  5 15:28 4-lastlines
+-rwxrw-r-- 1 afristorm3 afristorm3   29 Sep  5 15:31 5-firstlines
+-rwxrw-r-- 1 afristorm3 afristorm3   36 Sep  5 15:33 6-third_line
+-rwxrw-r-- 1 afristorm3 afristorm3   78 Sep  5 15:34 7-file
+-rwxrw-r-- 1 afristorm3 afristorm3   36 Sep  5 15:36 8-cwd_state
+-rw-rw-r-- 1 afristorm3 afristorm3   12 Sep  5 15:35 \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 afristorm3 afristorm3    0 Sep  5 15:36 ls_cwd_content
+-rw-rw-r-- 1 afristorm3 afristorm3  132 Sep  5 09:34 README.md
