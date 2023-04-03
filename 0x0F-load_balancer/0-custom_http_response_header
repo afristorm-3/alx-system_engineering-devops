@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# Install the nginx server
+# Configures a new Ubuntu server with a custom HTTP header response
 sudo apt-get update
-sudo apt-get -y install nginx
-echo "add_header X-Served-By $HOSTNAME;" |
-sudo tee -a /etc/nginx/sites-available/default
+sudo apt-get install -y nginx
+sudo sed -i '/http {/a add_header X-Served-By $hostname;' /etc/nginx/nginx.conf
 sudo service nginx restart
