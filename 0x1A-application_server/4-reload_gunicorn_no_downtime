@@ -1,0 +1,18 @@
+#! /bin/bash
+
+# Stop Gunicorn gracefully
+
+echo "Stopping Gunicorn gracefully..."
+sudo systemctl stop gunicorn.service
+
+# Wait for a few seconds to allow existing requests to complet sleep 5
+
+# Start Gunicorn again
+
+echo "Starting Gunicorn..."
+sudo systemctl start gunicorn.service
+
+# Check the status of Gunicorn
+
+echo "Gunicorn status:"
+sudo systemctl status gunicorn.service
