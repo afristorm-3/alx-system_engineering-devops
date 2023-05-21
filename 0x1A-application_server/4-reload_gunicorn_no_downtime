@@ -1,4 +1,4 @@
-#!/bin/bash/env
+#!/usr/bin/bash/env
 
 # Reload Gunicorn
 systemctl reload gunicorn
