@@ -1,18 +1,26 @@
 #! /bin/bash
 
-# Stop Gunicorn gracefully
+# Get the process ID of the Gunicorn master
+master_pid=$(pgrep gunicorn)
 
-echo "Stopping Gunicorn gracefully..."
-sudo systemctl stop gunicorn.service
+echo "Initiating Gunicorn graceful reload..."
 
-# Wait for a few seconds to allow existing requests to complet sleep 5
+# Send a USR2 signal to the master process to gracefully reload the workers
+kill -USR2 "$master_pid"
 
-# Start Gunicorn again
+# Wait for a brief period to allow workers to finish processing ongoing requests
+sleep 5
 
-echo "Starting Gunicorn..."
-sudo systemctl start gunicorn.service
+# Check the status of the workers to ensure they have restarted successfully
+while true; do
+  worker_count=$(pgrep -c gunicorn)
 
-# Check the status of Gunicorn
-
-echo "Gunicorn status:"
-sudo systemctl status gunicorn.service
+  if [ "$worker_count" -eq 0 ]; then
+    echo "All workers have been restarted. Gunicorn reload completed."
+    break
+  else
+    echo "Waiting for workers to restart..."
+    sleep 2
+  fi
+done
+ systemctl status gunicorn.service
