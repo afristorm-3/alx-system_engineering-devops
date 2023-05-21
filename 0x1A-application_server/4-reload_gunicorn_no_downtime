@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Gracefully reloads Gunicorn
-# Restart the Gunicorn service
-sudo systemctl restart gunicorn
 ps aux | grep gunicorn | awk '{ print $2 }' | xargs kill -HUP
+
+# Wait for the workers to restart
+
+sleep 5
