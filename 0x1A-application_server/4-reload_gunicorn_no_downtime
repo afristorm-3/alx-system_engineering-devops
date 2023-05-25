@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Gracefully reloads Gunicorn.
 #shellcheck disable=SC2009
-pkill -HUP gunicorn
+sudo reload gunicorn
